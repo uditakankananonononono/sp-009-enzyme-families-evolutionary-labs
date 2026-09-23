@@ -1,0 +1,22 @@
+{
+ "project": "SP-009",
+ "python": "3.10.12",
+ "os_cores": 2,
+ "ram_gb": 1,
+ "disk_note": "15GB free at start",
+ "wheels": {
+  "pyarrow-17.0.0": "f7ae2de664e0b158d1607699a16a488de3d008ba99b3a7aa5de1cbc13574d047",
+  "numpy-2.2.6": "fc7b73d02efb0e18c000e9ad8b83480dfcd5dfd11065997ed4c6747470ae8915",
+  "pandas-2.3.3": "dd7478f1463441ae4ca7308a70e90b33470fa593429f9d4c578dd00d1fa78838",
+  "scikit_learn-1.7.2": "7a58814265dfc52b3295b1900cfb5701589d30a8bb026c7540f1e9d3499d5ec8",
+  "scipy-1.15.3": "9e2abc762b0811e09a0d3258abee2d98e0c703eee49464ce0069590846f31d40"
+ },
+ "data_sha256": {
+  "dms_v1_shard0.parquet": "878ebe8029ead3ad76e0a5d082a67d32fa504128354c306983c79035576c9ba1",
+  "dms_v1_shard1.parquet": "62e6ffb6f99400361c2a056ed3e88d8dfe7adcc4aa96f745cb5f89e73a4e19dc",
+  "dms_v1_shard2.parquet": "a6ab95532f613aeab7db71f6264646c77d12f37dcda131dd5dd0b8b18abca4f2",
+  "dms_v1_shard3.parquet": "cec079f4dc3f40efc1e7b87b5157f03ebd34a6b4193fc59532c7aa4f27c75e65",
+  "dms_v1_shard4.parquet": "aba5c14a7a9b2abdf90ced45ea5aa9140e5726237ef47825294d08e7b7bc2cef"
+ },
+ "compute_ceilings": "no torch-class frameworks (RAM); alignment building via kmer/parsing only, no external aligners; parquet shard streaming for 1GB RAM"
+}

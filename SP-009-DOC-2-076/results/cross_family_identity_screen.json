@@ -1,0 +1,77 @@
+[
+ {
+  "pair": "OXDA vs HXK4",
+  "kmer3_jaccard": 0.0397,
+  "best_window_identity": 0.091
+ },
+ {
+  "pair": "OXDA vs CBS",
+  "kmer3_jaccard": 0.0654,
+  "best_window_identity": 0.088
+ },
+ {
+  "pair": "OXDA vs BLAT",
+  "kmer3_jaccard": 0.0331,
+  "best_window_identity": 0.084
+ },
+ {
+  "pair": "OXDA vs PPM1D",
+  "kmer3_jaccard": 0.0579,
+  "best_window_identity": 0.088
+ },
+ {
+  "pair": "OXDA vs AMIE",
+  "kmer3_jaccard": 0.0334,
+  "best_window_identity": 0.058
+ },
+ {
+  "pair": "HXK4 vs CBS",
+  "kmer3_jaccard": 0.0575,
+  "best_window_identity": 0.075
+ },
+ {
+  "pair": "HXK4 vs BLAT",
+  "kmer3_jaccard": 0.0272,
+  "best_window_identity": 0.094
+ },
+ {
+  "pair": "HXK4 vs PPM1D",
+  "kmer3_jaccard": 0.0522,
+  "best_window_identity": 0.077
+ },
+ {
+  "pair": "HXK4 vs AMIE",
+  "kmer3_jaccard": 0.0418,
+  "best_window_identity": 0.087
+ },
+ {
+  "pair": "CBS vs BLAT",
+  "kmer3_jaccard": 0.0364,
+  "best_window_identity": 0.112
+ },
+ {
+  "pair": "CBS vs PPM1D",
+  "kmer3_jaccard": 0.0626,
+  "best_window_identity": 0.071
+ },
+ {
+  "pair": "CBS vs AMIE",
+  "kmer3_jaccard": 0.039,
+  "best_window_identity": 0.087
+ },
+ {
+  "pair": "BLAT vs PPM1D",
+  "kmer3_jaccard": 0.0393,
+  "best_window_identity": 0.091
+ },
+ {
+  "pair": "BLAT vs AMIE",
+  "kmer3_jaccard": 0.0285,
+  "best_window_identity": 0.084
+ },
+ {
+  "pair": "PPM1D vs AMIE",
+  "kmer3_jaccard": 0.0285,
+  "best_window_identity": 0.084
+ }
+]

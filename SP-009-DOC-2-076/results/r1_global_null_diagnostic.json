@@ -1,0 +1,32 @@
+{
+ "HXK4": {
+  "roc_auc_median": 0.5983340436163709,
+  "roc_auc_p95": 0.7661307755882301,
+  "roc_auc_min": 0.39331471620221414,
+  "roc_auc_max": 0.7703605287773554,
+  "reps": 20,
+  "permutation_scope": "global_across_pooled_training_rows",
+  "seed": 20260922,
+  "rationale": "diagnostic companion to frozen within-family null; see results/r1_shuffled_null_investigation.md"
+ },
+ "BLAT": {
+  "roc_auc_median": 0.5428013964754779,
+  "roc_auc_p95": 0.6507700647196032,
+  "roc_auc_min": 0.35194891983086524,
+  "roc_auc_max": 0.6527323339201394,
+  "reps": 20,
+  "permutation_scope": "global_across_pooled_training_rows",
+  "seed": 20260922,
+  "rationale": "diagnostic companion to frozen within-family null; see results/r1_shuffled_null_investigation.md"
+ },
+ "CBS": {
+  "roc_auc_median": 0.4817244785319805,
+  "roc_auc_p95": 0.602659970488325,
+  "roc_auc_min": 0.3723325495406022,
+  "roc_auc_max": 0.6877255491535765,
+  "reps": 20,
+  "permutation_scope": "global_across_pooled_training_rows",
+  "seed": 20260922,
+  "rationale": "diagnostic companion to frozen within-family null; see results/r1_shuffled_null_investigation.md"
+ }
+}

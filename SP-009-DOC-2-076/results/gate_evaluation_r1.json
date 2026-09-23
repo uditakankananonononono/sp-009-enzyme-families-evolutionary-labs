@@ -1,0 +1,213 @@
+{
+ "gate": "R1_uncertainty_frozen_decision_rule",
+ "rule_verbatim": "all-features must beat conservation-only AND profile-only with 95% CI excluding zero under BOTH bootstraps, in >=4/5 families, for BOTH ROC-AUC and PR-AUC; position- and family-balanced metrics reported alongside",
+ "protocol_r1_sha256": "427a2ddd0441b03124e5e99ab72364d47c7e18c45776a17dad1649f3662c0d73",
+ "source_gate_frozen_sha256": "2ebffa75c579e55b69af6c005b690a10e1f84a23b7ef06d422a804253b4d00d3",
+ "evaluated_at": "2026-09-22T07:40:00+05:30",
+ "per_family": {
+  "HXK4": {
+   "checks": {
+    "all_vs_conservation_only_roc": {
+     "delta_variant": -0.0010622577189365323,
+     "variant_CI": [
+      -0.008784520860162683,
+      0.0065853568508727894
+     ],
+     "delta_posblock": -0.0008238770105970517,
+     "posblock_CI": [
+      -0.0109814451279952,
+      0.009465943257621479
+     ],
+     "beats_under_both": false,
+     "reversal_under_both": false
+    },
+    "all_vs_conservation_only_pr": {
+     "delta_variant": -0.017836052510524003,
+     "variant_CI": [
+      -0.03109244582565418,
+      -0.004325340150314881
+     ],
+     "delta_posblock": -0.017270431244091944,
+     "posblock_CI": [
+      -0.033768921959515606,
+      -0.0007204024368384894
+     ],
+     "beats_under_both": false,
+     "reversal_under_both": true
+    },
+    "all_vs_profile_only_roc": {
+     "delta_variant": 0.014646094434771717,
+     "variant_CI": [
+      0.007980455882785125,
+      0.02110102060903298
+     ],
+     "delta_posblock": 0.014622704211160631,
+     "posblock_CI": [
+      0.001980794480486412,
+      0.02826864101976198
+     ],
+     "beats_under_both": true,
+     "reversal_under_both": false
+    },
+    "all_vs_profile_only_pr": {
+     "delta_variant": 0.009364729549884376,
+     "variant_CI": [
+      -0.0012254277661032677,
+      0.020126592555132907
+     ],
+     "delta_posblock": 0.009340086966466987,
+     "posblock_CI": [
+      -0.006307746183874629,
+      0.02543742278432671
+     ],
+     "beats_under_both": false,
+     "reversal_under_both": false
+    }
+   },
+   "passes_rule": false,
+   "severe_reversals": [
+    "all_vs_conservation_only_pr"
+   ]
+  },
+  "BLAT": {
+   "checks": {
+    "all_vs_conservation_only_roc": {
+     "delta_variant": 0.06081721211881569,
+     "variant_CI": [
+      0.051676716286651714,
+      0.06990191911673228
+     ],
+     "delta_posblock": 0.061433094577432845,
+     "posblock_CI": [
+      0.045600958609427644,
+      0.07662955371510112
+     ],
+     "beats_under_both": true,
+     "reversal_under_both": false
+    },
+    "all_vs_conservation_only_pr": {
+     "delta_variant": 0.08762253358228622,
+     "variant_CI": [
+      0.07345359429584071,
+      0.10208148887864324
+     ],
+     "delta_posblock": 0.08608312024667536,
+     "posblock_CI": [
+      0.059363354158242065,
+      0.10979511640123346
+     ],
+     "beats_under_both": true,
+     "reversal_under_both": false
+    },
+    "all_vs_profile_only_roc": {
+     "delta_variant": 0.0246995910317232,
+     "variant_CI": [
+      0.01503743705846721,
+      0.034433481883699935
+     ],
+     "delta_posblock": 0.024610924793794453,
+     "posblock_CI": [
+      -0.0008676968999221374,
+      0.04966573370661084
+     ],
+     "beats_under_both": false,
+     "reversal_under_both": false
+    },
+    "all_vs_profile_only_pr": {
+     "delta_variant": 0.04480040092526355,
+     "variant_CI": [
+      0.03114993684005791,
+      0.05835518389426219
+     ],
+     "delta_posblock": 0.044209536254302184,
+     "posblock_CI": [
+      0.012333157695234806,
+      0.0783771163747084
+     ],
+     "beats_under_both": true,
+     "reversal_under_both": false
+    }
+   },
+   "passes_rule": false,
+   "severe_reversals": []
+  },
+  "CBS": {
+   "checks": {
+    "all_vs_conservation_only_roc": {
+     "delta_variant": 0.01879021395697661,
+     "variant_CI": [
+      0.012497050653715475,
+      0.025025990734972785
+     ],
+     "delta_posblock": 0.018885555564757017,
+     "posblock_CI": [
+      0.011254462048917094,
+      0.026809122333757828
+     ],
+     "beats_under_both": true,
+     "reversal_under_both": false
+    },
+    "all_vs_conservation_only_pr": {
+     "delta_variant": 0.02122611385351042,
+     "variant_CI": [
+      0.01121185916271406,
+      0.0312518837890574
+     ],
+     "delta_posblock": 0.02161419770607037,
+     "posblock_CI": [
+      0.009698264545597366,
+      0.03441902464840226
+     ],
+     "beats_under_both": true,
+     "reversal_under_both": false
+    },
+    "all_vs_profile_only_roc": {
+     "delta_variant": 0.021537223357684876,
+     "variant_CI": [
+      0.016235319958969357,
+      0.026907818041047162
+     ],
+     "delta_posblock": 0.021515818720186097,
+     "posblock_CI": [
+      0.013751807606781925,
+      0.030085638510251464
+     ],
+     "beats_under_both": true,
+     "reversal_under_both": false
+    },
+    "all_vs_profile_only_pr": {
+     "delta_variant": 0.02586456134975157,
+     "variant_CI": [
+      0.0172434992029941,
+      0.03448658256085826
+     ],
+     "delta_posblock": 0.025869052599107323,
+     "posblock_CI": [
+      0.014563838846048291,
+      0.037718493505975934
+     ],
+     "beats_under_both": true,
+     "reversal_under_both": false
+    }
+   },
+   "passes_rule": true,
+   "severe_reversals": []
+  }
+ },
+ "families_passing": 1,
+ "families_required": 4,
+ "estimable_families": 3,
+ "non_estimable": {
+  "OXDA": "source gate FAIL (coverage 0.736<0.80) - baselines only, no win/loss counting",
+  "PPM1D": "source gate FAIL (Neff 32.5, coverage 0.688) - baselines only, no win/loss counting",
+  "AMIE_backup": "source gate FAIL (Neff 164.0, coverage 0.708) - backup swap consumed, still failing"
+ },
+ "heterogeneity_clause": {
+  "rule": "a single severe reversal (CI excluding zero in the negative direction) blocks an aggregate pass claim regardless of 4/5 count",
+  "triggered": true,
+  "detail": "HXK4 all-vs-conservation PR-AUC: CI excludes zero NEGATIVE under both bootstraps (variant [-0.0311,-0.0043], position-block [-0.0338,-0.0007])"
+ },
+ "verdict": "FAIL",
+ "verdict_text": "Flexibility add-on cannot graduate under the frozen five-family estimand (3/5 estimable). All-features passes the frozen rule in 1/3 estimable families (CBS only); a significant negative reversal vs conservation on HXK4 PR-AUC blocks any aggregate pass claim under the heterogeneity clause. Three-family performance is exploratory only.",
+ "r2_recommendation": "CLOSE the method. Incremental signal is not consistent under both bootstraps (CBS small consistent win ~+0.02; BLAT fails vs profile under position-block bootstrap; HXK4 flat on ROC and significantly negative on PR-AUC vs conservation). Per protocol r2_preview: close the evolutionary-flexibility add-on and retain the best simple baseline as the useful negative (HXK4: conservation-only 0.7654; BLAT: profile-only 0.6903; CBS: conservation-only 0.6949 - with all-features gains of +0.00/+0.06/+0.02 ROC-AUC respectively, exploratory)."
+}

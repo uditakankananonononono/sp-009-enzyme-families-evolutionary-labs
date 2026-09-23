@@ -1,0 +1,174 @@
+{
+ "project": "SP-009 / DOC-2-076 Enzyme Families as Evolutionary Laboratories",
+ "round": "R0 - feasibility and identifiability only",
+ "locked_at_ist": "2026-09-22T03:39:00+05:30",
+ "estimand": "Does natural substitution pattern (family-evolution flexibility) improve variant-effect prediction beyond conservation and family-profile baselines on held-out enzyme families? (prediction, not discovery/classification)",
+ "commercial_boundary": "enzyme-engineering mutation prioritization with calibrated abstention and reviewer traceability; never proof of catalytic activity or safety; a useful negative (family evolution adds nothing beyond conservation) is a deliverable",
+ "families_frozen": {
+  "OXDA": {
+   "ec": "1.4.3.3",
+   "chem": "FAD-dependent D-amino-acid oxidation (oxidoreductase)",
+   "pfam": [
+    "PF01266"
+   ],
+   "uniprot": "P80324",
+   "organism": "Rhodotorula toruloides",
+   "assays": {
+    "primary": "OXDA_RHOTO_Vanella_2023_expression",
+    "secondary": [
+     "OXDA_RHOTO_Vanella_2023_activity"
+    ]
+   }
+  },
+  "HXK4": {
+   "ec": "2.7.1.1",
+   "chem": "ATP phosphotransfer to glucose (transferase)",
+   "pfam": [
+    "PF00349",
+    "PF03727"
+   ],
+   "uniprot": "P35557",
+   "organism": "Homo sapiens",
+   "assays": {
+    "primary": "HXK4_HUMAN_Gersing_2022_activity",
+    "secondary": [
+     "HXK4_HUMAN_Gersing_2023_abundance"
+    ]
+   }
+  },
+  "BLAT": {
+   "ec": "3.5.2.6",
+   "chem": "serine nucleophile beta-lactam hydrolysis (hydrolase)",
+   "pfam": [
+    "PF13354"
+   ],
+   "uniprot": "P62593",
+   "organism": "Escherichia coli",
+   "assays": {
+    "primary": "BLAT_ECOLX_Deng_2012",
+    "secondary": [
+     "BLAT_ECOLX_Firnberg_2014",
+     "BLAT_ECOLX_Stiffler_2015",
+     "BLAT_ECOLX_Jacquier_2013"
+    ]
+   }
+  },
+  "CBS": {
+   "ec": "4.2.1.22",
+   "chem": "PLP-dependent beta-replacement (lyase)",
+   "pfam": [
+    "PF00571",
+    "PF00291"
+   ],
+   "uniprot": "P35520",
+   "organism": "Homo sapiens",
+   "assays": {
+    "primary": "CBS_HUMAN_Sun_2020",
+    "secondary": []
+   }
+  },
+  "PPM1D": {
+   "ec": "3.1.3.16",
+   "chem": "metal-dependent Ser/Thr phosphoprotein phosphatase (hydrolase, distinct chemistry vs BLAT)",
+   "pfam": [
+    "PF00481"
+   ],
+   "uniprot": "O15297",
+   "organism": "Homo sapiens",
+   "assays": {
+    "primary": "PPM1D_HUMAN_Miller_2022",
+    "secondary": []
+   }
+  },
+  "AMIE_backup": {
+   "ec": "3.5.1.4",
+   "chem": "amidase-signature Ser-cisSer-Lys triad (backup family, used only if a primary family fails an R1 gate)",
+   "pfam": [
+    "PF00795"
+   ],
+   "uniprot": "P11436",
+   "organism": "Pseudomonas aeruginosa",
+   "assays": {
+    "primary": "AMIE_PSEAE_Wrenbeck_2017",
+    "secondary": []
+   }
+  }
+ },
+ "label_semantics_frozen": "DMS_score_bin==1 <=> DMS_score >= DMS_binarization_cutoff (functional/tolerated); bin==0 = damaging. Verified deterministically on OXDA_expression and HXK4_activity with zero exceptions. Cutoffs per assay from ProteinGym reference CSV (never re-derived).",
+ "assay_quality_floors_frozen": {
+  ">=900_single_substitutions_per_assay": true,
+  "both_classes_present": ">=250 variants per class per primary assay (OXDA_activity secondary flagged: 281 damaging; primary OXDA_expression 1329/5440)",
+  "coordinate_mapping": "mutant position p requires target_seq[p-1]==WT amino acid, asserted for every scored variant"
+ },
+ "holdouts_frozen": "leave-one-family-out CV over the 5 primary families (5 folds); ALL assays of a held-out family excluded from training in that fold; AMIE_backup not part of CV",
+ "leakage_exclusions_frozen": [
+  "no training family may share any Pfam domain with the held-out family (structurally guaranteed by selection; asserted)",
+  "pairwise cross-family target-sequence identity screen: best-window identity must be <0.30 (measured <=0.112 all pairs; results/cross_family_identity_screen.json)",
+  "the assayed target sequence itself is excluded from its own family alignment before scoring (no self-scoring circularity)",
+  "raw DMS scores never pooled across assays; per-assay bin labels (frozen ProteinGym cutoffs) are the only cross-assay comparable target; continuous analyses use per-assay rank/z-score computed within training families only"
+ ],
+ "flexibility_scores_frozen": [
+  "site_entropy: Shannon entropy of the family-alignment column (bits, 20-letter + gap handling frozen in code)",
+  "site_rel_entropy: KL divergence of column distribution vs UniProt background amino-acid frequencies",
+  "substitution_spectrum: per-column observed amino-acid frequency vector (the natural substitution pattern) used as 20-dim feature",
+  "profile_llr: log-likelihood ratio of mutant vs WT amino acid under the family PSSM (pseudocount 0.5 frozen)"
+ ],
+ "conservation_baselines_frozen": [
+  "column_conservation (1 - normalized entropy)",
+  "BLOSUM62 WT->mut substitution score",
+  "PSSM WT-vs-mut log-odds (equals profile_llr sign-flipped baseline kept deliberately to test incremental value)"
+ ],
+ "candidate_models_frozen": [
+  "logistic regression (L2, sklearn)",
+  "ridge regression on continuous per-assay z-scored DMS",
+  "class-prior naive baseline",
+  "feature ablations: conservation-only, profile-only, flexibility-only, all - the ablation IS the primary question"
+ ],
+ "r1_primary_metric_frozen": "per-held-out-family ROC-AUC on bin labels and Spearman on continuous scores; candidate(all-features) must beat both conservation-only and profile-only ablations with variant-level bootstrap 95% CI excluding zero in at least 4 of 5 families to claim incremental value; per-family abstention when a feature group is non-estimable (e.g., alignment column coverage <80% of assayed positions); calibration gate: reliability slope within [0.5,2.0] on held-out family",
+ "non_estimability_clauses": [
+  "if coordinate mapping fails for any variant class -> family excluded and recorded",
+  "if family alignment yields <80% column coverage of assayed positions -> flexibility features non-estimable for that family, recorded, family still scored on baselines",
+  "if cross-family identity screen had failed -> project non-estimable as designed"
+ ],
+ "sources": {
+  "ProteinGym_v1": {
+   "url": "https://huggingface.co/datasets/OATML-Markslab/ProteinGym_v1",
+   "license": "code MIT (GitHub OATML-Markslab/ProteinGym LICENSE verified); data publicly distributed benchmark with per-assay citations (Notin et al. 2023); reference CSV from GitHub main",
+   "shards_sha256": {
+    "shard0": "878ebe8029ead3ad76e0a5d082a67d32fa504128354c306983c79035576c9ba1",
+    "shard1": "62e6ffb6f99400361c2a056ed3e88d8dfe7adcc4aa96f745cb5f89e73a4e19dc",
+    "shard2": "a6ab95532f613aeab7db71f6264646c77d12f37dcda131dd5dd0b8b18abca4f2",
+    "shard3": "cec079f4dc3f40efc1e7b87b5157f03ebd34a6b4193fc59532c7aa4f27c75e65",
+    "shard4": "aba5c14a7a9b2abdf90ced45ea5aa9140e5726237ef47825294d08e7b7bc2cef"
+   },
+   "note": "shard0-2 sha256 match upstream HF LFS oids exactly"
+  },
+  "UniProt_REST": {
+   "url": "https://rest.uniprot.org",
+   "use": "canonical sequences, EC/Rhea/Pfam annotations, homolog counts",
+   "license": "CC BY 4.0"
+  },
+  "BRENDA": {
+   "url": "https://www.brenda-enzymes.org/license.php",
+   "audit": "online version CC BY 4.0 (Release 2026.1, Leibniz DSMZ) - usable with attribution; DSI/Cali-Fund monetary-contribution caveat applies to commercial users (flagged for product stage); NOT a hard dependency - mechanism annotation sourced from UniProt EC/Rhea xrefs",
+   "license": "CC BY 4.0"
+  },
+  "Rhea": {
+   "audit": "website REST behind Cloudflare challenge for direct curl (preserved environmental limitation); UniProt carries Rhea xrefs per entry - used as primary route; web_fetch path reachable",
+   "license": "CC BY 4.0"
+  },
+  "InterPro_EBI": {
+   "url": "https://www.ebi.ac.uk/interpro/api",
+   "use": "Pfam entry metadata (reachable, verified PF00069 probe)"
+  }
+ },
+ "r0_gates": {
+  "G0.1": ">=3 mechanistically distinct enzyme families, open annotations",
+  "G0.2": "unambiguous residue mapping canonical<->assay coordinates",
+  "G0.3": "variant floors and both classes per family",
+  "G0.4": "sufficient homologs for family alignments (>=1000 UniProt entries per Pfam)",
+  "G0.5": "no homolog/assay leakage across held-out families (identity <0.30 all pairs)",
+  "G0.6": "license audit of all data dependencies"
+ },
+ "never": "no outcome inspection before this lock; gate text never modified after lock; negatives and non-estimability preserved; no Ensembl (unreachable); no ftp.ebi.ac.uk (TLS-blocked)"
+}

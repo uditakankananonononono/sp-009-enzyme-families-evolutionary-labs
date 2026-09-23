@@ -1,0 +1,56 @@
+{
+ "OXDA": {
+  "n_input_homologs": 499,
+  "n_surviving": 468,
+  "Neff": 211.4,
+  "target_spanning_cols": 364,
+  "position_coverage_ge50": 0.7363,
+  "gate_pass": false,
+  "alignment_sha256": "cdccf8bbfdd7f58f922dca83d126a617e2b0d423a1a27cf18ec4dcf8f2448c8e"
+ },
+ "HXK4": {
+  "n_input_homologs": 499,
+  "n_surviving": 491,
+  "Neff": 412.2,
+  "target_spanning_cols": 465,
+  "position_coverage_ge50": 0.9398,
+  "gate_pass": true,
+  "alignment_sha256": "f95ad0f07d6afb3fd3763aa16611e6c9619300e5c78a246836788054b123777d"
+ },
+ "BLAT": {
+  "n_input_homologs": 499,
+  "n_surviving": 496,
+  "Neff": 424.8,
+  "target_spanning_cols": 286,
+  "position_coverage_ge50": 0.8706,
+  "gate_pass": true,
+  "alignment_sha256": "e278ffc32edfa862d31daa36b96a1a0440c91165b2ae512b1b5d4c4ff6616e04"
+ },
+ "CBS": {
+  "n_input_homologs": 499,
+  "n_surviving": 498,
+  "Neff": 234.9,
+  "target_spanning_cols": 551,
+  "position_coverage_ge50": 0.9274,
+  "gate_pass": true,
+  "alignment_sha256": "08b05a08db4aaf85f2881c4be008e5d5bc4e280828472095983b9d9a3cd992c4"
+ },
+ "PPM1D": {
+  "n_input_homologs": 499,
+  "n_surviving": 38,
+  "Neff": 32.5,
+  "target_spanning_cols": 605,
+  "position_coverage_ge50": 0.6876,
+  "gate_pass": false,
+  "alignment_sha256": "9995843b509b91e384871e1dcfe89c307df641d7054039f1ebc56df6076f6a00"
+ },
+ "AMIE": {
+  "n_input_homologs": 499,
+  "n_surviving": 481,
+  "Neff": 164.0,
+  "target_spanning_cols": 346,
+  "position_coverage_ge50": 0.7081,
+  "gate_pass": false,
+  "alignment_sha256": "ee9ac88bb005ae8d84a6b0f2f703266c7f7d5ab625f4ab93b4857e2009b68287"
+ }
+}

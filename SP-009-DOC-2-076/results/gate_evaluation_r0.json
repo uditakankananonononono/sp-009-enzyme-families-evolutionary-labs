@@ -1,0 +1,32 @@
+{
+ "round": "SP-009 R0 (DOC-2-076)",
+ "protocol_sha256": "49292b006e75c1066d9df96fcc5ab9a45cfc54b714dbe3be75f4c24fbeb45918",
+ "gates": {
+  "G0.1": {
+   "verdict": "PASS",
+   "evidence": "5 mechanistically distinct families frozen, spanning EC classes 1/2/3/4 with 4 distinct catalytic chemistries (FAD oxidase OXDA; ATP phosphotransferase HXK4; serine beta-lactamase BLAT; PLP lyase CBS; metal-dependent phosphatase PPM1D); distinct Pfam domains per family (PF01266 / PF00349+PF03727 / PF13354 / PF00571+PF00291 / PF00481); 6th backup AMIE (PF00795). All UniProt annotations fetched live."
+  },
+  "G0.2": {
+   "verdict": "PASS",
+   "evidence": "results/coordinate_mapping_proof.json - 9/11 assay target_seqs IDENTICAL full-length to UniProt canonical; OXDA both assays EXACT SUBSTRING canonical 2..365 (unambiguous offset, single solution). Mutant WT-residue assertion rule frozen."
+  },
+  "G0.3": {
+   "verdict": "PASS",
+   "evidence": "results/family_variant_counts.json - primary assays: OXDA 6769 (1329 damaging/5440 tolerated), HXK4 8570 (4285/4285), BLAT 4996 (2495/2501), CBS 7217 (3903/3314), PPM1D 7889 (3943/3946). All >=900 singles, both classes >=250. Label semantics verified: bin==1 <=> score>=frozen cutoff (0 exceptions on 2 assays checked exhaustively)."
+  },
+  "G0.4": {
+   "verdict": "PASS",
+   "evidence": "UniProt live counts per Pfam: PF01266 184,589; PF00349 19,058; PF13354 22,291; PF00571 249,656; PF00481 89,408 (backup PF00795 106,714). All >>1000 floor."
+  },
+  "G0.5": {
+   "verdict": "PASS",
+   "evidence": "results/cross_family_identity_screen.json - best-window pairwise identity 0.058-0.112, kmer3 Jaccard 0.027-0.065 across all 15 pairs; all <0.30 frozen threshold; no shared Pfam domains."
+  },
+  "G0.6": {
+   "verdict": "PASS",
+   "evidence": "ProteinGym code MIT (LICENSE verified), data open benchmark with per-assay citations; shards sha256 match upstream HF LFS oids (0-2 verified byte-identical). UniProt CC BY 4.0. BRENDA audited: online CC BY 4.0 usable with attribution, DSI/Cali-Fund commercial caveat flagged, NOT a hard dependency. Rhea: Cloudflare-blocked for direct API (preserved limitation), UniProt Rhea xrefs used as primary route. InterPro API reachable."
+  }
+ },
+ "overall": "R0 GO - estimand is identifiable: labels frozen and verified, coordinates unambiguous, holdouts leakage-clean, homologs abundant, all sources open. No R1 outcome inspected.",
+ "non_estimability_preserved": "clauses frozen in protocol (mapping failure, <80% alignment column coverage, identity-screen failure); AMIE is backup-only and outside CV"
+}

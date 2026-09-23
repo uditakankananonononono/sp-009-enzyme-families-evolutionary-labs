@@ -1,0 +1,150 @@
+{
+ "OXDA": {
+  "query": "(xref:pfam-PF01266) AND NOT fragment:true AND length:[182 TO 728]",
+  "raw_rows": 164321,
+  "post_quality": 164041,
+  "post_taxcap": 1500,
+  "post_cluster": 1472,
+  "sk_counts": {
+   "Eukaryota": 495,
+   "Bacteria": 490,
+   "Archaea": 483,
+   "Unknown": 4
+  },
+  "raw_sha256": "bb16f0c9839ae715bf133c29095410905d352c4d5dbc09a6e42b74b630841c8a",
+  "submit_sha256": "7254ec583214304ea4f55443d7eb0dc3275a1af7044285951a09f20b95356431",
+  "aligned_pool": 499,
+  "submit_sha256_v2": "783ec128b9f61affc5429da297f8b1496149bd5fc307c9f7b4b43dfdfe712f0b",
+  "adaptation": "EBI MAFFT REST caps at 500 sequences; seeded stratified subsample to 499 homologs + target. Gate floors (Neff>=200, coverage>=80%) unchanged; documented execution adaptation, gate text untouched.",
+  "alignment_service": "clustalo",
+  "alignment_job": "clustalo-R20260922-004511-0015-32326513-p1m",
+  "alignment_result_type": "fa",
+  "alignment_sha256": "cdccf8bbfdd7f58f922dca83d126a617e2b0d423a1a27cf18ec4dcf8f2448c8e"
+ },
+ "HXK4": {
+  "query": "((xref:pfam-PF00349) AND (xref:pfam-PF03727)) AND NOT fragment:true AND length:[232 TO 930]",
+  "raw_rows": 15773,
+  "post_quality": 15599,
+  "post_taxcap": 1128,
+  "post_cluster": 992,
+  "sk_counts": {
+   "Eukaryota": 781,
+   "Bacteria": 211
+  },
+  "raw_sha256": "07bca9acafefacaaeedf6e8d16b88f091479ec4c9e4eab2b966330527282c3bf",
+  "submit_sha256": "6e5bd911e0c395f97e0d12d483bfbd19fbd89bcd6875de32211ddd3fed87906d",
+  "aligned_pool": 499,
+  "submit_sha256_v2": "da78a0f7117b2d9731291c69e08d31e58e9a7e54328d1a0e286e7535bad2bf65",
+  "adaptation": "EBI MAFFT REST caps at 500 sequences; seeded stratified subsample to 499 homologs + target. Gate floors (Neff>=200, coverage>=80%) unchanged; documented execution adaptation, gate text untouched.",
+  "alignment_service": "clustalo",
+  "alignment_job": "clustalo-R20260922-004514-0488-24339203-p2m",
+  "alignment_result_type": "fa",
+  "alignment_sha256": "f95ad0f07d6afb3fd3763aa16611e6c9619300e5c78a246836788054b123777d"
+ },
+ "BLAT": {
+  "query": "(xref:pfam-PF13354) AND NOT fragment:true AND length:[143 TO 572]",
+  "raw_rows": 20962,
+  "post_quality": 20635,
+  "post_taxcap": 984,
+  "post_cluster": 930,
+  "sk_counts": {
+   "Bacteria": 854,
+   "Unknown": 3,
+   "Eukaryota": 59,
+   "Archaea": 14
+  },
+  "raw_sha256": "4a711fe347f56e3566659d8d9fa2c609d73c467284b11c642bd1268435d8a5b0",
+  "submit_sha256": "d8935220988ae6682fd591e146fc05d5f31a3e7e495c6c311c956e59a1861d8b",
+  "aligned_pool": 499,
+  "submit_sha256_v2": "98bfe18671c2ab7704676c5ef654fef4aa7fd54006e4b7f2ec09c7242167327b",
+  "adaptation": "EBI MAFFT REST caps at 500 sequences; seeded stratified subsample to 499 homologs + target. Gate floors (Neff>=200, coverage>=80%) unchanged; documented execution adaptation, gate text untouched.",
+  "alignment_service": "clustalo",
+  "alignment_job": "clustalo-R20260922-004518-0047-1405115-p1m",
+  "alignment_result_type": "fa",
+  "alignment_sha256": "e278ffc32edfa862d31daa36b96a1a0440c91165b2ae512b1b5d4c4ff6616e04"
+ },
+ "CBS": {
+  "query": "((xref:pfam-PF00571) AND (xref:pfam-PF00291)) AND NOT fragment:true AND length:[275 TO 1102]",
+  "raw_rows": 8533,
+  "post_quality": 8499,
+  "post_taxcap": 1500,
+  "post_cluster": 1154,
+  "sk_counts": {
+   "Eukaryota": 558,
+   "Bacteria": 596
+  },
+  "raw_sha256": "63a8604b8cdf4c30f66c956c11b47aa9f28df9e21bfb8d95800aa07c2e9c5f4d",
+  "submit_sha256": "230d3c4b3a63bda7b4b1a91d49d4f8d9d36f922175e85f87446eca737e53329a",
+  "aligned_pool": 499,
+  "submit_sha256_v2": "4df501ca7bea7dd8d6c07a7753686f66fd4be03624cf265a81aba15f27a93d63",
+  "adaptation": "EBI MAFFT REST caps at 500 sequences; seeded stratified subsample to 499 homologs + target. Gate floors (Neff>=200, coverage>=80%) unchanged; documented execution adaptation, gate text untouched.",
+  "alignment_service": "clustalo",
+  "alignment_job": "clustalo-R20260922-004525-0936-25420391-p1m",
+  "alignment_result_type": "fa",
+  "alignment_sha256": "08b05a08db4aaf85f2881c4be008e5d5bc4e280828472095983b9d9a3cd992c4"
+ },
+ "PPM1D": {
+  "query": "(xref:pfam-PF00481) AND NOT fragment:true AND length:[302 TO 1210]",
+  "raw_rows": 64923,
+  "post_quality": 64483,
+  "post_taxcap": 1500,
+  "post_cluster": 1323,
+  "sk_counts": {
+   "Eukaryota": 731,
+   "Bacteria": 576,
+   "Unknown": 15,
+   "Archaea": 1
+  },
+  "raw_sha256": "9ec62d15bb33ce319af0c6779ab75ad284e3283578acbb1df0a3e7ddc2130495",
+  "submit_sha256": "ca050b030606b1525d5b5e48ecb7d66d1e6bb979556eaa59f12328700d47a71c",
+  "aligned_pool": 499,
+  "submit_sha256_v2": "067579fe6c42de8c34f9350615389113197d632411a9cf2cfc3664fe8bd3449e",
+  "adaptation": "EBI MAFFT REST caps at 500 sequences; seeded stratified subsample to 499 homologs + target. Gate floors (Neff>=200, coverage>=80%) unchanged; documented execution adaptation, gate text untouched.",
+  "alignment_service": "clustalo",
+  "alignment_job": "clustalo-R20260922-004529-0333-99359655-p1m",
+  "alignment_result_type": "fa",
+  "alignment_sha256": "9995843b509b91e384871e1dcfe89c307df641d7054039f1ebc56df6076f6a00"
+ },
+ "AMIE": {
+  "query": "(xref:pfam-PF00795) AND NOT fragment:true AND length:[173 TO 692]",
+  "raw_rows": 97675,
+  "post_quality": 97494,
+  "post_taxcap": 1500,
+  "post_cluster": 1465,
+  "sk_counts": {
+   "Bacteria": 481,
+   "Eukaryota": 477,
+   "Archaea": 505,
+   "Unknown": 2
+  },
+  "raw_sha256": "844b8cac97dfce0c67ac8b27591adf954b3243ad4eee0a421959975dbe0abbb5",
+  "submit_sha256": "890ddd761eac6cb5a1ef1cd4543528acaa124f1c2d43d39f87562161d7d5176c",
+  "aligned_pool": 499,
+  "submit_sha256_v2": "9b6e4078742148a529cfbdd31a259724b49a4c1eb1d39be85d11cea69d787407",
+  "adaptation": "EBI MAFFT REST caps at 500 sequences; seeded stratified subsample to 499 homologs + target. Gate floors (Neff>=200, coverage>=80%) unchanged; documented execution adaptation, gate text untouched.",
+  "alignment_service": "clustalo",
+  "alignment_job": "clustalo-R20260922-004532-0622-41584693-p1m",
+  "alignment_result_type": "fa",
+  "alignment_sha256": "ee9ac88bb005ae8d84a6b0f2f703266c7f7d5ab625f4ab93b4857e2009b68287"
+ },
+ "clustalo_fallback": {
+  "reason": "EBI MAFFT REST jobs still RUNNING >90 min after submission",
+  "families": [
+   "OXDA",
+   "HXK4",
+   "BLAT",
+   "CBS",
+   "PPM1D",
+   "AMIE"
+  ],
+  "job_ids": {
+   "OXDA": "clustalo-R20260922-004511-0015-32326513-p1m",
+   "HXK4": "clustalo-R20260922-004514-0488-24339203-p2m",
+   "BLAT": "clustalo-R20260922-004518-0047-1405115-p1m",
+   "CBS": "clustalo-R20260922-004525-0936-25420391-p1m",
+   "PPM1D": "clustalo-R20260922-004529-0333-99359655-p1m",
+   "AMIE": "clustalo-R20260922-004532-0622-41584693-p1m"
+  },
+  "rule": "use whichever service finishes first per family, record which"
+ }
+}

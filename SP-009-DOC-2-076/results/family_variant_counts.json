@@ -1,0 +1,106 @@
+{
+ "AMIE_PSEAE_Wrenbeck_2017": {
+  "single_mutants": 6227,
+  "bin1": 3114,
+  "bin0": 3113,
+  "seq_len": 346,
+  "score_min": -2.279,
+  "score_max": 0.844
+ },
+ "BLAT_ECOLX_Jacquier_2013": {
+  "single_mutants": 989,
+  "bin1": 501,
+  "bin0": 488,
+  "seq_len": 286,
+  "score_min": -5.322,
+  "score_max": 1.0
+ },
+ "OXDA_RHOTO_Vanella_2023_expression": {
+  "single_mutants": 6769,
+  "bin1": 5440,
+  "bin0": 1329,
+  "seq_len": 364,
+  "score_min": -0.512,
+  "score_max": 0.433
+ },
+ "BLAT_ECOLX_Firnberg_2014": {
+  "single_mutants": 4783,
+  "bin1": 2397,
+  "bin0": 2386,
+  "seq_len": 286,
+  "score_min": 0.001,
+  "score_max": 2.902
+ },
+ "OXDA_RHOTO_Vanella_2023_activity": {
+  "single_mutants": 6396,
+  "bin1": 6115,
+  "bin0": 281,
+  "seq_len": 364,
+  "score_min": -0.225,
+  "score_max": 0.445
+ },
+ "HXK4_HUMAN_Gersing_2022_activity": {
+  "single_mutants": 8570,
+  "bin1": 4285,
+  "bin0": 4285,
+  "seq_len": 465,
+  "score_min": -1.085,
+  "score_max": 7.068
+ },
+ "CBS_HUMAN_Sun_2020": {
+  "single_mutants": 7217,
+  "bin1": 3314,
+  "bin0": 3903,
+  "seq_len": 551,
+  "score_min": 0.0,
+  "score_max": 2.359
+ },
+ "BLAT_ECOLX_Deng_2012": {
+  "single_mutants": 4996,
+  "bin1": 2501,
+  "bin0": 2495,
+  "seq_len": 286,
+  "score_min": -6.056,
+  "score_max": 2.459
+ },
+ "PPM1D_HUMAN_Miller_2022": {
+  "single_mutants": 7889,
+  "bin1": 3946,
+  "bin0": 3943,
+  "seq_len": 605,
+  "score_min": -1.47,
+  "score_max": 1.42
+ },
+ "BLAT_ECOLX_Stiffler_2015": {
+  "single_mutants": 4996,
+  "bin1": 2498,
+  "bin0": 2498,
+  "seq_len": 286,
+  "score_min": -3.743,
+  "score_max": 0.356
+ },
+ "HXK4_HUMAN_Gersing_2023_abundance": {
+  "single_mutants": 8396,
+  "bin1": 5767,
+  "bin0": 2629,
+  "seq_len": 465,
+  "score_min": -0.983,
+  "score_max": 1.61
+ },
+ "PTEN_HUMAN_Matreyek_2021": {
+  "single_mutants": 5083,
+  "bin1": 2541,
+  "bin0": 2542,
+  "seq_len": 403,
+  "score_min": -0.278,
+  "score_max": 1.665
+ },
+ "PTEN_HUMAN_Mighell_2018": {
+  "single_mutants": 7260,
+  "bin1": 5379,
+  "bin0": 1881,
+  "seq_len": 403,
+  "score_min": -5.755,
+  "score_max": 2.818
+ }
+}

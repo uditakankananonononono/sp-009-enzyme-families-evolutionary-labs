@@ -1,0 +1,41 @@
+{
+ "project": "SP-009 / DOC-2-076",
+ "round": "R1 - evolutionary flexibility incremental value",
+ "inherits": "protocol_r0.json sha256 49292b006e75c1066d9df96fcc5ab9a45cfc54b714dbe3be75f4c24fbeb45918 (families, holdouts, labels, leakage, features, baselines, metrics floors)",
+ "locked_at_ist": "2026-09-22T03:42:00+05:30",
+ "amendments_incorporated": [
+  "alignment-source gate per family locked before scores",
+  "position-block (hierarchical site) bootstrap added; both uncertainty analyses required",
+  "full metric battery; ROC-AUC alone insufficient",
+  "BLOSUM-only, class-prior, shuffled-column controls added",
+  "per-family heterogeneity preserved"
+ ],
+ "alignment_source_gate_frozen": {
+  "fetch": "UniProt REST TSV, query per family: OXDA xref:pfam-PF01266; HXK4 (xref:pfam-PF00349 AND xref:pfam-PF03727); BLAT xref:pfam-PF13354; CBS (xref:pfam-PF00571 AND xref:pfam-PF00291); PPM1D xref:pfam-PF00481; AMIE_backup xref:pfam-PF00795. All AND NOT fragment:true AND length:[0.5x to 2x of target length].",
+  "quality_filters": "exclude any sequence containing X,B,Z,J,U,O residues; exclude entries whose sequence equals the assayed target (self-exclusion); exclude close assay homologs: any sequence with best-window identity >=0.97 to the target over the assayed region",
+  "taxonomic_sampling": "stratify by superkingdom (from UniProt lineage field); cap any superkingdom at 60% of sampled pool; deterministic seed 20260922",
+  "max_sequence_count": "<=1500 pre-cluster per family; if more pass filters, deterministic seeded sample preserving the taxonomic caps",
+  "identity_clustering_reweighting": "greedy kmer3-Jaccard >=0.8 redundancy removal (seeded order, target excluded from clustering since removed); Henikoff position-based weights on surviving alignment columns; Neff = 1/sum(w_i^2) with weights normalized to sum 1",
+  "alignment_method": "EBI MAFFT REST (www.ebi.ac.uk/Tools/services/rest/mafft), default matrix, version/job ids recorded; target sequence prepended as first row; fallback if service fails after 3 retries over >=30 min: EBI Clustal Omega REST, recorded; no other aligner substitutes",
+  "trimming_gap_rules": "keep only alignment columns where the target row has a residue (target-spanning columns); drop homologs with >50% gaps across target-spanning columns post-trim",
+  "floors": "per family: >=80% of assayed positions covered by a target-spanning column with weighted occupancy >=50%; Neff >=200 effective sequences",
+  "failure_rule": "family missing either floor -> recorded non-estimable for flexibility features; AMIE backup swap permitted ONCE for one failed family; a still-failing family is scored on baselines only, flagged; no post-outcome tuning",
+  "artifact_hashes": "sha256 recorded for: fetched TSV, post-filter FASTA, submitted FASTA, raw alignment, trimmed alignment, weights vector"
+ },
+ "uncertainty_frozen": {
+  "variant_bootstrap": "10,000 resamples over variant rows (as locked in R0)",
+  "position_block_bootstrap": "10,000 resamples over residue positions; all variants at a sampled position enter together (hierarchical dependence respected)",
+  "decision_rule": "all-features must beat conservation-only AND profile-only with 95% CI excluding zero under BOTH bootstraps, in >=4/5 families, for BOTH ROC-AUC and PR-AUC; position- and family-balanced metrics reported alongside",
+  "heterogeneity": "per-family effects reported individually; a single severe reversal (CI excluding zero in the negative direction) blocks an aggregate pass claim regardless of 4/5 count"
+ },
+ "locked_checks": [
+  "all preprocessing/imputation/scaling/class weights fit inside each leave-one-family-out training fold only",
+  "assert: no secondary assay, duplicate target sequence, homolog >=97% identity, or target-derived profile of a held-out family enters its training fold",
+  "activity vs abundance/expression secondary assays never pooled; R1 uses primary assays only; secondary-assay transport deferred to R2 as routed",
+  "metrics per held-out family: ROC-AUC, PR-AUC, MCC and balanced accuracy at training-fold-only threshold (Youden on training), Spearman on continuous z-scores, reliability slope/intercept, ECE (10-bin), Brier, abstention coverage",
+  "baselines: conservation-only, profile-only (locked R0), plus BLOSUM-only, class-prior, and shuffled-column-label control (labels permuted within family, seed 20260922, 20 replicates)",
+  "feature ablations fit identically; the ablation comparison IS the primary question"
+ ],
+ "compute_ceiling": "no torch; sklearn logistic/ridge only; alignment via EBI REST; parquet streaming; all within 1GB RAM",
+ "r2_preview": "if incremental value passes: within-family assay transport on frozen BLAT/OXDA/HXK4 secondary assays; if fails: close evolutionary-flexibility add-on, retain best simple baseline as the useful negative"
+}

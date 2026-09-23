@@ -1,0 +1,6 @@
+{
+ "file": "protocol/protocol_r0.json",
+ "sha256": "49292b006e75c1066d9df96fcc5ab9a45cfc54b714dbe3be75f4c24fbeb45918",
+ "locked_at_ist": "2026-09-22T03:39:00+05:30",
+ "note": "locked before any R1 outcome inspection; R0 feasibility evidence was collected only for gate decisions"
+}

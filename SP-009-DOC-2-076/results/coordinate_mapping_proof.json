@@ -1,0 +1,57 @@
+{
+ "AMIE_PSEAE_Wrenbeck_2017": {
+  "len_target": 346,
+  "len_canon": 346,
+  "mapping": "IDENTICAL full-length"
+ },
+ "BLAT_ECOLX_Jacquier_2013": {
+  "len_target": 286,
+  "len_canon": 286,
+  "mapping": "IDENTICAL full-length"
+ },
+ "OXDA_RHOTO_Vanella_2023_expression": {
+  "len_target": 364,
+  "len_canon": 368,
+  "mapping": "EXACT SUBSTRING canonical 2..365"
+ },
+ "BLAT_ECOLX_Firnberg_2014": {
+  "len_target": 286,
+  "len_canon": 286,
+  "mapping": "IDENTICAL full-length"
+ },
+ "OXDA_RHOTO_Vanella_2023_activity": {
+  "len_target": 364,
+  "len_canon": 368,
+  "mapping": "EXACT SUBSTRING canonical 2..365"
+ },
+ "HXK4_HUMAN_Gersing_2022_activity": {
+  "len_target": 465,
+  "len_canon": 465,
+  "mapping": "IDENTICAL full-length"
+ },
+ "CBS_HUMAN_Sun_2020": {
+  "len_target": 551,
+  "len_canon": 551,
+  "mapping": "IDENTICAL full-length"
+ },
+ "BLAT_ECOLX_Deng_2012": {
+  "len_target": 286,
+  "len_canon": 286,
+  "mapping": "IDENTICAL full-length"
+ },
+ "PPM1D_HUMAN_Miller_2022": {
+  "len_target": 605,
+  "len_canon": 605,
+  "mapping": "IDENTICAL full-length"
+ },
+ "BLAT_ECOLX_Stiffler_2015": {
+  "len_target": 286,
+  "len_canon": 286,
+  "mapping": "IDENTICAL full-length"
+ },
+ "HXK4_HUMAN_Gersing_2023_abundance": {
+  "len_target": 465,
+  "len_canon": 465,
+  "mapping": "IDENTICAL full-length"
+ }
+}
